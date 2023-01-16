@@ -12,9 +12,8 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-let DB = process.env.DATA_BASE.replace('<PASSWORD>', process.env.DATA_BASE_PASSWORD)
+let DB = `mongodb+srv://atulc204:atul2411@cluster0.jcqqfxd.mongodb.net/test_001?retryWrites=true&w=majority`
 console.log("🚀 ~ file: server.js ~ line 10 ~ DB", DB)
-// let array = [1, 34, 56, 2, 23, 4]
 
 mongoose.connect(DB, {
     // useNewUrlParser: true,
